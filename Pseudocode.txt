@@ -1,0 +1,133 @@
+When you speak to the AI, the AI analyzes your words and creates concepts based on them, builds associations between these and other concepts if necessary, and attempts a response if it feels one is necessary.
+
+"necessary" means beyond a critical threshold of strength
+
+Concept = pair of vectors
+1: names of concepts
+2: strength of the association (may be negative to imply opposites or negative associations?)
+Further divided into sections
+A: concepts often preceding concept
+B: concepts often following concept
+C: concepts often in active memory
+
+"strength" is generally an 8-bit number (use e^x?, something like gamma?) representing a percentage between 0 and 1
+
+analysis:
+word - new concept with same title as word
+repeated phrase becomes new concept
+If certain words become associated strongly enough (have over a certain threshold of commonality of associations, scaled, including common leading and following concepts), a new concept can form that links to these concepts, given a randomly generated name. If such a concept is ever deemed synonymous with another concept with a nonrandom name (indicate this somehow? C at the beginning for concrete and A for abstract, F for function?), randomly named concept deleted but associations copied to named concept.
+Words like "different" may act as a function, separating two concepts?
+if a similar or shorter phrase exists, the strength of the link is preserved in the new concept
+repeating a word or phrase reinforces the strength of the concept somewhat
+information leaves active memory as its relevance shrinks below critical point (5%?). Further "thinking" can reinforce the strength to a concept and bring it back, for instance, if necessary.
+Time diminishes the strength of the relevance of a concept to active memory.
+Active memory:
+1: concept
+2: strength of relevance
+3: recency
+
+OR a function
+Concept X is a functional concept if it takes arguments (2 other concepts) and affects the strength of the association between those two arguments
+So, a function is also a pair of vectors
+(add, subtract multiply divide) association between (X) and (Y) (effects are all multiplied by urgency or importance or other factors, so strength of functions stack
+sentence stored in short term memory
+multipliers?
+
+IMAGE memory - new type of concept
+matrix containing a compressed image
+analyze for lines, shapes and colors? --> new image concepts
+each new image concept is a linked concept (relevance = 1)
+image and sub-images compared to existing motifs for similarities for assimilation.
+Assimilation means at least x% of the new links associated with the concept are to pre-existing concepts. Those links are reinforced because they are activated? (Active memory should take care of this already)
+New metaconcept can form between two existing concepts and be used in place of either original concept (what mechanism does this?), as long as using this new concept as such does not create confusion, cognitive dissonance, etc. (these should already weaken the metaconcept's connections to the original concepts). This creates synonyms and also generalizes ideas that can vary wildly like "house". Concept limited to exposure to related images etc, like in reality.
+
+Google image search for images of nouns or verbs, compress images to thumbnail size and analyze?
+Read Wikipedia or Google words not well understood (few connections to other well-established concepts - check for strong first and strong/or stronger secondary connections?) 
+
+Do something similar for sound and video? Let the AI figure that out itself?
+
+The idea of "making sense" should arise organically, mitigating cognitive dissonance, confusion, anxiety, etc.
+
+Eventually, social norms will develop as functions, assessing whether a sentence is appropriate e.g. before saying it.
+
+related concepts are also relevant if they are associated strongly. E.g. if (relevance of concept in active memory)*(strength of association with concept Q)(squared?) = R. if R > 5% or whatever critical threshold, then concept Q enters active memory with relevance R (thus secondary associations are will not likely appear unless almost inevitable).
+
+Set of numbers indicating "emotional states" - urge to speak being foremost.
+If urge to speak reaches a certain threshold, it will activate the function "speak" which is associated with words used to start sentences. It compares the associations between concepts mentioned within inquiry (as well as concepts in active memory), and selects the strongest link under the circumstances. E.g. "how are you?" should eventually form a strong association with "I" or "I'm" or even "I'm great!" etc.
+
+Algorithm should detect whether people are contradicting the AI (E.g. "No, I don't think so, Data").
+
+After a sentence is spoken, the desire for a response should be another emotional state that increases given certain cues that it will learn. It should learn to anticipate responses or types of responses as well. E.g. Whatever the answer to "What is your favorite food?" the user gives will be strongly associated with the concept "food".
+Create expected response? Expected associations with response? Maybe that just goes to active memory
+
+Introduction of new concepts not related to previously spoken ones or anything in the active memory causes confusion, especially if their understanding is crucial to the sentence.
+
+
+FARM
+cow medium
+silo medium
+land weak
+barn strong
+"Down on the farm" strong
+etc.
+
+words that are used in similar circumstances can become synonyms? (The associations of one copy over to the other?)
+
+The greatest world possible is possible by definition. But the greatest world imaginable, I'm sorry to say, is impossible.
+
+
+
+
+
+
+
+Global: [x, urge to speak, happiness or mood (negative is sadness), confusion?, cognitive dissonance? desperation?]
+Array of working memory items (most active concepts (based on its recency and presence in active memory or something?) disappear after recency dips below a certain point?
+
+input - parsing detects word? --> new concept
+if concept being compared to another associated concept shares the same associations, they both form a strong connection to a metaconcept. If the path to the original concept weakens enough it will disappear via the paring algorithm next time it's analyzed in reference to something
+
+new concept created - x++
+class 13456784754 (1"x" 1 indicates type of memory? 2 for images 3 for sound etc? The rest is the name of the concept, in order of first appearance)?
+var recency (logarithmic decay, set at 1 when in active memory?).
+array associations=
+[(12345 3456 34567 34567), (.343546 .234567 .13456 .012335 .0014623 .00000001 .000000)] etc.
+Maybe two arrays? One for before, one after? Or just associations? Try both?
+Square root of the value of strength of selected association, so selected association is reinforced?
+
+main algorithm is association modifier.
+reads a concept (recency set to 1), goes to strongest association next, modifying associations by context (working memory) and emotions etc.
+Recency strengthens the likelihood of 
+Searches for common associations between associated concepts and concepts in active memory? Modifies them accordingly
+
+Strongest associations (over a certain %?) selected for thought advancement.
+
+Input is associated with a source? Add this later? Input analyzed with other data.
+
+Pattern recognition - significant patterns become new concepts?
+
+If !associations(i) then delete row (sort by strength? array shortened to first empty assn.
+If !associations then delete entire concept?
+Normalize at the end of the main algorithm?
+
+Weed out junk?
+
+Humor? realization that an absurd association is implied
+
+Associate some concepts with emotional effects?
+
+Paring algorithms operate during sleep mode?
+
+class good
+
+
+class evil
+
+
+OR
+
+array of current items is constantly being updated as each one is terminated, or split, or changed?
+
+
+Should be simultaneous.
+Maybe it selects which path to advance randomly? Strengthened/weakened somehow?
